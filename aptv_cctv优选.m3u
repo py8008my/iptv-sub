@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="http://epg.51zmt.top:8000/e.xml"
-# 央视公开源优选（已实测可播，master + .ts 切片均 200）
+# 央视公开源优选（全国通用，master+variant 实测 200）
 #EXTINF:-1 tvg-name="cctv-1" tvg-id="cctv-1" tvg-logo="https://tb.zbds.top/logo/CCTV-1.png" group-title="央视频道",CCTV-1 综合
 http://74.91.26.218:82/live/cctv1hd.m3u8
 #EXTINF:-1 tvg-name="cctv-2" tvg-id="cctv-2" tvg-logo="https://tb.zbds.top/logo/CCTV-2.png" group-title="央视频道",CCTV-2 财经
