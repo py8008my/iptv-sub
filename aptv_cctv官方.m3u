@@ -1,0 +1,38 @@
+#EXTM3U x-tvg-url="http://epg.51zmt.top:8000/e.xml"
+# CCTV official live source via cntv Tencent CDN, no signature or referer required
+#EXTINF:-1 tvg-name="cctv-1" tvg-id="cctv-1" tvg-logo="https://tb.zbds.top/logo/CCTV-1.png" group-title="央视频道",CCTV-1 综合
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv1_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-2" tvg-id="cctv-2" tvg-logo="https://tb.zbds.top/logo/CCTV-2.png" group-title="央视频道",CCTV-2 财经
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv2_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-3" tvg-id="cctv-3" tvg-logo="https://tb.zbds.top/logo/CCTV-3.png" group-title="央视频道",CCTV-3 综艺
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv3_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-4" tvg-id="cctv-4" tvg-logo="https://tb.zbds.top/logo/CCTV-4.png" group-title="央视频道",CCTV-4 中文国际
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv4_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-5" tvg-id="cctv-5" tvg-logo="https://tb.zbds.top/logo/CCTV-5.png" group-title="央视频道",CCTV-5 体育
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv5_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-5+" tvg-id="cctv-5+" tvg-logo="https://tb.zbds.top/logo/CCTV-5+.png" group-title="央视频道",CCTV-5+ 体育赛事
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv5p_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-6" tvg-id="cctv-6" tvg-logo="https://tb.zbds.top/logo/CCTV-6.png" group-title="央视频道",CCTV-6 电影
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv6_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-7" tvg-id="cctv-7" tvg-logo="https://tb.zbds.top/logo/CCTV-7.png" group-title="央视频道",CCTV-7 国防军事
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv7_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-8" tvg-id="cctv-8" tvg-logo="https://tb.zbds.top/logo/CCTV-8.png" group-title="央视频道",CCTV-8 电视剧
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv8_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-9" tvg-id="cctv-9" tvg-logo="https://tb.zbds.top/logo/CCTV-9.png" group-title="央视频道",CCTV-9 纪录
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv9_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-10" tvg-id="cctv-10" tvg-logo="https://tb.zbds.top/logo/CCTV-10.png" group-title="央视频道",CCTV-10 科教
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv10_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-11" tvg-id="cctv-11" tvg-logo="https://tb.zbds.top/logo/CCTV-11.png" group-title="央视频道",CCTV-11 戏曲
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv11_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-12" tvg-id="cctv-12" tvg-logo="https://tb.zbds.top/logo/CCTV-12.png" group-title="央视频道",CCTV-12 社会与法
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv12_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-13" tvg-id="cctv-13" tvg-logo="https://tb.zbds.top/logo/CCTV-13.png" group-title="央视频道",CCTV-13 新闻
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv13_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-14" tvg-id="cctv-14" tvg-logo="https://tb.zbds.top/logo/CCTV-14.png" group-title="央视频道",CCTV-14 少儿
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv14_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-15" tvg-id="cctv-15" tvg-logo="https://tb.zbds.top/logo/CCTV-15.png" group-title="央视频道",CCTV-15 音乐
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv15_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-16" tvg-id="cctv-16" tvg-logo="https://tb.zbds.top/logo/CCTV-16.png" group-title="央视频道",CCTV-16 奥林匹克
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv16_1/index.m3u8
+#EXTINF:-1 tvg-name="cctv-17" tvg-id="cctv-17" tvg-logo="https://tb.zbds.top/logo/CCTV-17.png" group-title="央视频道",CCTV-17 农业农村
+http://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv17_1/index.m3u8
