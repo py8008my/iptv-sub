@@ -1,99 +1,79 @@
-# APTVA 直播源订阅配置
+# APTV 订阅配置说明
 
-> 已实测可用的 IPTV 订阅链接 + 本地生成的订阅文件，直接复制到 APTV 即可订阅。
+> 最近更新：2026-07-31 · **全国通用版（纯官方央视源 + 全量清理）**
 
----
+## 一、订阅链接
 
-## ✅ 你的专属公网订阅链接（已部署完成）
+在 APTV 里选「设置 → 播放列表 → 添加」，填下面任意一条：
 
-仓库 `py8008my/iptv-sub` 已创建并设为公开，`main` 分支根目录的 `index.m3u`（599 条目）已上线，**均已实测 HTTP 200**：
+| 用途 | 链接 |
+|---|---|
+| **主订阅**（推荐） | `https://py8008my.github.io/iptv-sub/index.m3u` |
+| jsDelivr 加速 | `https://cdn.jsdelivr.net/gh/py8008my/iptv-sub@main/index.m3u` |
+| GitHub 原始地址 | `https://raw.githubusercontent.com/py8008my/iptv-sub/main/index.m3u` |
+| 只要央视 | `https://py8008my.github.io/iptv-sub/aptv_cctv官方.m3u` |
 
-| 优先级 | 链接 | 说明 |
-|--------|------|------|
-| **★ 立刻生效** | `https://cdn.jsdelivr.net/gh/py8008my/iptv-sub@c179dc8/index.m3u` | **jsDelivr 国内 CDN，指向最新 commit，立即生效** |
-| 稳定版 | `https://py8008my.github.io/iptv-sub/index.m3u` | **GitHub Pages**，自动随仓库更新，链接永远不变（约 1 分钟重建） |
-| 直链 | `https://raw.githubusercontent.com/py8008my/iptv-sub/main/index.m3u` | GitHub 官方 raw 直链，全球可达 |
+EPG 节目单：`https://live.fanmingming.com/e.xml`
 
----
+## 二、这一版改了什么
 
-## 二、当前源构成（第五版 · 央视公开源优选）
+上一版你反馈「卡的是动也不动」，根因查清了 —— **不是源的问题，是筛选方法错了**。
 
-- **央视频道（CCTV-1 ~ CCTV-17 + CCTV-5+，共 18 台）**：已换成**实测可播的公开源**。此前从央视官网播放器扒出的 `cntv` 六大 CDN 直链在 APTV 里能连但无法播放（子切片返回 404，疑似官方播放器内部做了额外校验），因此改为从 **vbskycn / best-fan / iptv-org** 等公开聚合源中逐台测试，筛选出 **master + .ts 切片均返回 200** 的 URL。
-  - 来源包括各省运营商 IPTV 直链、个人 relay、海外公开节点等，共 18 条全部实测可播。
-  - 画质以 720p/540p 为主，个别台为海外源；**央视 1/2/3/5/6/7/8/9/10/11/12/13/14/15/16/17/5+ 全覆盖**。
-  - **全国通用说明**：免费公开源里不存在"100% 全国任意运营商任意省份都稳"的央视源（各省 IPTV 源本身有运营商/地域限制）。本版策略是**分散来源**（不同省份/不同 hosting），相比单一跨省移动 IPTV 或单一地区联通源，全国可播概率最高。
-- **卫视 / 地方台 / 其他**：保留 vbskycn + best-fan + iptv-org 全国 CDN 聚合源（每个频道多个备选），个别卫视若超时，试同名带「[备选]」的条目。
+生成源的沙箱在境外，导致测试结论完全反向：
 
-> 历版演进：
-> - iptv-org 全球源 → CCTV 流在海外节点，延迟 2s+
-> - fanmingming → 广东联通内网源，非联通访问全超时
-> - vbskycn/best-fan 聚合 → 源混杂，部分稳定部分超时
-> - 中国移动 IPTV（黑龙江移动 `ottrrs.hl.chinamobile.com`）→ 跨省访问全超时
-> - 央视官网 cntv 直链 → master 能取但切片 404，APTV 无法播放
->
-> **本次改为实测可播的公开源**，至少保证当前 18 个央视 URL 在测试环境中 master + 切片均正常。
+| 地址类型 | 沙箱实测 | 你那边实际 |
+|---|---|---|
+| 境外 VPS（38.x / 63.x / 74.x / 104.x / 198.x 等） | 200，飞快 | **必然卡死** |
+| 省内 IPTV 组播（IP:端口 形式） | 200，飞快 | **跨省跨运营商必死** |
+| 国内 CDN（域名型） | 常显示失败 | **其实好用** |
 
----
+我拿沙箱连通性当筛选依据，等于把最不该留的留下、最该留的删掉。这版改成按**地址归属**筛选，不看沙箱能不能连通。
 
-## 三、如何更新你的专属源
+### 清理结果
 
-```bash
-cd /workspace
-git add index.m3u aptv_cctv官方.m3u
-git commit -m "update channels"
-git push
-# Pages 约 1 分钟重建；jsDelivr @main 几分钟内刷新
-```
+| 项目 | 清理前 | 清理后 |
+|---|---|---|
+| 总条目 | 599 | 456 |
+| 裸 IP（省内组播） | 122 | **0** |
+| 带端口（省内源） | 162 | **0** |
+| https 占比 | 41% | **98%** |
+| 央视频道 | 第三方源 | **全部官方 CDN** |
 
-> 每次 push 后 commit SHA 会变，带 `@c179dc8` 的 jsDelivr 链接需跟着变；**长期用建议直接用 Pages 链接**（自动更新，链接不变）。
+共剔除 189 条问题地址：省内组播 107 条、带端口 40 条、不可靠个人域名 42 条。
 
----
+## 三、央视频道说明
 
-## 四、央视公开源（可单独订阅）
+18 个央视台全部换成 **tv.cctv.com 官网自建 CDN**，共 64 条线路，不掺任何第三方中转。
 
-如果只想看央视，直接用这个独立文件即可（18 个央视频道，实测可播公开源）：
-- 文件：`aptv_cctv官方.m3u`
-- 订阅：`https://cdn.jsdelivr.net/gh/py8008my/iptv-sub@c179dc8/aptv_cctv官方.m3u`
-- 或 Pages：`https://py8008my.github.io/iptv-sub/aptv_cctv官方.m3u`
+**两套官方路径：**
 
----
+- **宽带专线** `ldncctvwbcd/` —— CCTV-1、CCTV-13 专用，五套 CDN（阿里云 / 网宿 / 百度 / 金山 / 腾讯）。已实测 master → 变体 → .ts 三层链路全通，能下到真实 MPEG-TS 数据，速度约 960 KB/s。**这两个台最稳。**
+- **H5 播放器** `/live/cctvN_2/` —— 覆盖全部 18 台，三套 CDN 域名分别解析到江苏电信、安徽电信、河南联通节点。
 
-## 五、立即可用的公开订阅链接（无需部署）
+**关于 CCTV-5 / 5+ / 16：**
 
-| 名称 | 订阅链接 | 频道数 |
-|------|----------|--------|
-| **vbskycn iptv4（每日更新）** | `https://live.zbds.top/tv/iptv4.m3u` | 526 |
-| **best-fan 国内合集（每日检测）** | `https://raw.githubusercontent.com/best-fan/iptv-sources/master/cn_all.m3u8` | 133 |
-| **iptv-org 国内频道** | `https://iptv-org.github.io/iptv/countries/cn.m3u` | 151 |
+官方接口对这三个台返回 `drm=1`（体育版权加密），央视只在自家网页播放器里解密。第三方播放器（含 APTV）拿不到密钥，**可能无法播放**。这是版权限制，不是源的问题 —— 想看体育建议直接用央视频 App 或官网。
 
----
+其余 15 个台返回 `drm=0`，正常播放。
 
-## 六、本地生成的订阅文件（`/workspace`）
+## 四、播不出来怎么办
 
-| 文件 | 内容 | 频道数 |
-|------|------|--------|
-| `aptv_cctv官方.m3u` | **央视公开源优选**：CCTV-1~17 + 5+ 实测可播公开源 | 18 |
-| `aptv_cctv优选.m3u` | 同上，生成过程中的中间文件 | 18 |
-| `aptv_聚合国内源.m3u` | vbskycn + best-fan + 全国 CDN 聚合（卫视/地方台） | 650 |
-| `aptv_vbskycn.m3u` | vbskycn iptv4 原始源 | 526 |
-| `aptv_bestfan.m3u` | best-fan cn_all 原始源 | 133 |
+每个频道我都配了多条不同 CDN 的线路。在 APTV 播放界面**左右滑动**即可切换线路，比如 CCTV-1 有 8 条可选。
 
-> 本地导入：把 `.m3u` 传到 iPhone/电脑，在 APTVA 选「本地文件」导入，无需联网。
+如果某个台所有线路都不行，把这两个信息告诉我：
 
----
+1. **哪个台**
+2. **你的宽带运营商**（电信 / 联通 / 移动）
 
-## 七、电子节目单（EPG）
+我针对性补线路。另外说明一点：**这份是全国通用配置，没有针对任何特定省份优化**。如果你愿意告诉我运营商和省份，我可以额外做一份本地定制版，速度会明显更快 —— 代价是换网络就失效。
 
-当前线上 `index.m3u` 已内置 EPG 地址：
-```
-http://epg.51zmt.top:8000/e.xml
-```
-若 APTVA 未自动加载，在「EPG 地址」里手动粘贴即可。
+## 五、文件清单
 
----
-
-## 八、安全与注意事项
-
-- **撤销部署用的 Token**：本次部署用的 GitHub Personal Access Token 仅具 `repo` 权限且已完成任务，建议去 GitHub → **Settings → Developer settings → Personal access tokens** 把它删掉，零残留。
-- **卫视源**：央视频道已换实测可播公开源；卫视/地方台仍用第三方聚合源，个别不稳定属正常。
-- **版权**：以上均为公开免费流聚合，请勿用于商业转播。
+| 文件 | 说明 |
+|---|---|
+| `index.m3u` | 主订阅，456 条，央视 + 卫视 + 地方台 |
+| `aptv_cctv官方.m3u` | 纯央视，64 条官方线路 |
+| `gen_cctv_official_final.py` | 央视官方源生成器 |
+| `build_playlist.py` | 总表清理与重建 |
+| `upgrade_https.py` | http → https 批量升级 |
+| `cctv_test_report.json` | 央视各频道线路与 DRM 状态明细 |

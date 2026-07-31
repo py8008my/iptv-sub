@@ -1,146 +1,348 @@
 {
-  "1": [
-    {
-      "url": "http://74.91.26.218:82/live/cctv1hd.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "2": [
-    {
-      "url": "http://123.160.235.136:9901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0",
-      "src": "aptv_bestfan.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "3": [
-    {
-      "url": "http://112.46.85.60:8009/hls/3/index.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "4": [
-    {
-      "url": "https://dash2.antik.sk/live/test_cctv_tizen/playlist.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "5": [
-    {
-      "url": "http://112.46.85.60:8009/hls/503/index.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "5+": [
-    {
-      "url": "http://cssbyd.imwork.net:8082/hls/6/index.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "6": [
-    {
-      "url": "http://123.130.84.106:8154/tsfile/live/0006_1.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "7": [
-    {
-      "url": "http://124.116.183.146:9901/tsfile/live/0007_1.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "8": [
-    {
-      "url": "http://112.46.85.60:8009/hls/8/index.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "9": [
-    {
-      "url": "http://112.27.235.94:8000/hls/10/index.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "10": [
-    {
-      "url": "http://123.160.235.136:9901/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0",
-      "src": "aptv_bestfan.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "11": [
-    {
-      "url": "http://123.160.235.136:9901/tsfile/live/0011_1.m3u8?key=txiptv&playlive=1&authid=0",
-      "src": "aptv_bestfan.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "12": [
-    {
-      "url": "http://222.223.41.27:8888/hls/12/index.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "13": [
-    {
-      "url": "http://ali-m-l.cztv.com/channels/lantian/channel21/1080p.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "14": [
-    {
-      "url": "http://112.27.235.94:8000/hls/15/index.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "15": [
-    {
-      "url": "http://123.130.84.106:8154/tsfile/live/0015_1.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "16": [
-    {
-      "url": "http://183.11.239.36:808/hls/169/index.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ],
-  "17": [
-    {
-      "url": "http://123.130.84.106:8154/tsfile/live/0019_1.m3u8",
-      "src": "aptv_vbskycn.m3u",
-      "ok": true,
-      "vcode": 200
-    }
-  ]
+  "CCTV-1 综合": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方专线·阿里云",
+        "url": "https://ldncctvwbcdali.v.myalicdn.com/ldncctvwbcd/cdrmldcctv1_1/index.m3u8"
+      },
+      {
+        "cdn": "官方专线·网宿",
+        "url": "https://ldncctvwbcdcnc.v.wscdns.com/ldncctvwbcd/cdrmldcctv1_1/index.m3u8"
+      },
+      {
+        "cdn": "官方专线·百度",
+        "url": "https://ldncctvwbcdbd.a.bdydns.com/ldncctvwbcd/cdrmldcctv1_1/index.m3u8"
+      },
+      {
+        "cdn": "官方专线·金山",
+        "url": "https://ldncctvwbcdks.v.kcdnvip.com/ldncctvwbcd/cdrmldcctv1_1/index.m3u8"
+      },
+      {
+        "cdn": "官方专线·腾讯",
+        "url": "https://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv1_1/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv1_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv1_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv1_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-2 财经": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv2_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv2_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv2_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-3 综艺": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv3_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv3_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv3_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-4 中文国际": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv4_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv4_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv4_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-5 体育": {
+    "drm": true,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv5_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv5_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv5_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-5+ 体育赛事": {
+    "drm": true,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv5plus_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv5plus_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv5plus_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-6 电影": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv6_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv6_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv6_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-7 国防军事": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv7_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv7_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv7_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-8 电视剧": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv8_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv8_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv8_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-9 纪录": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv9_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv9_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv9_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-10 科教": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv10_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv10_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv10_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-11 戏曲": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv11_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv11_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv11_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-12 社会与法": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv12_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv12_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv12_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-13 新闻": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方专线·阿里云",
+        "url": "https://ldncctvwbcdali.v.myalicdn.com/ldncctvwbcd/cdrmldcctv13_1/index.m3u8"
+      },
+      {
+        "cdn": "官方专线·网宿",
+        "url": "https://ldncctvwbcdcnc.v.wscdns.com/ldncctvwbcd/cdrmldcctv13_1/index.m3u8"
+      },
+      {
+        "cdn": "官方专线·百度",
+        "url": "https://ldncctvwbcdbd.a.bdydns.com/ldncctvwbcd/cdrmldcctv13_1/index.m3u8"
+      },
+      {
+        "cdn": "官方专线·金山",
+        "url": "https://ldncctvwbcdks.v.kcdnvip.com/ldncctvwbcd/cdrmldcctv13_1/index.m3u8"
+      },
+      {
+        "cdn": "官方专线·腾讯",
+        "url": "https://ldncctvwbcdtxy.liveplay.myqcloud.com/ldncctvwbcd/cdrmldcctv13_1/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv13_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv13_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv13_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-14 少儿": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv14_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv14_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv14_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-15 音乐": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv15_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv15_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv15_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-16 奥林匹克": {
+    "drm": true,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv16_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv16_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv16_2/index.m3u8"
+      }
+    ]
+  },
+  "CCTV-17 农业农村": {
+    "drm": false,
+    "lines": [
+      {
+        "cdn": "官方H5·电信·百度",
+        "url": "https://cctvbdh5ca.a.bdydns.com/live/cctv17_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·电信·金山",
+        "url": "https://cctvksh5ca.v.kcdnvip.com/live/cctv17_2/index.m3u8"
+      },
+      {
+        "cdn": "官方H5·联通·腾讯",
+        "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/live/cctv17_2/index.m3u8"
+      }
+    ]
+  }
 }
