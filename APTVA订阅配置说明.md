@@ -1,79 +1,82 @@
 # APTV 订阅配置说明
 
-> 最近更新：2026-08-01 · **国际官方源（纪录片 / 电影 / 动画 / 新闻）**
+> 最近更新：2026-08-01 · **国际主流官方源 v2（全主流品牌，已剔除中东/小地区/宗教源）**
 > 仓库：`py8008my/iptv-sub` · 部署：GitHub Pages
 
-## 一、背景：国内源在你的网络上走不通
+## 一、订阅链接
 
-前面几版（v3 裸 IP 转发、v4 移动 CDN、v5 全源覆盖）在你**北京单位 + 长城宽带（无 IPv6，5G 也不通）**的网络上三种失败模式都中招了：
-
-| 版本 | 失败模式 | 原因 |
-|---|---|---|
-| v3 裸 IP:端口转发 | 90% 不能看、10% 卡死 | 个人/省内 IPTV 转发，跨省被长城宽带 QoS 掐断 |
-| v4 中国移动全国 CDN | 全黑屏 | 网络层不可达（`39.134.x` 纯超时） |
-| v5 官方 CCTV CDN | 有声音无画面 / 被拒 | 官方 CDN 带 ChinaDRM 加密或反盗链 403 |
-
-结论：**静态国内源在你这条网络上是死路**。所以按你的要求，转做**国外官方播放源**。
-
-## 二、订阅链接（本次交付）
-
-在 APTV 里选「设置 → 播放列表 → 添加」，填下面任意一条。两个版本任选：
+在 APTV 里「设置 → 播放列表 → 添加」，填下面任意一条：
 
 | 版本 | 说明 | 链接 |
 |---|---|---|
-| **稳定版（推荐先试）** | 15 个，全部 Akamai / Amagi / Cloudfront / getaj 等**一线大 CDN 官方源**，在长城宽带下最有可能直接通 | `https://py8008my.github.io/iptv-sub/intl_stable.m3u` |
-| 全量版 | 29 个，含稳定版 + 中小 CDN 源（动画类多为中小 CDN，需你实测） | `https://py8008my.github.io/iptv-sub/intl.m3u` |
+| **稳定版（推荐先试）** | 19 个，全主流大厂 + Akamai/Amagi/Cloudfront 大 CDN | `https://py8008my.github.io/iptv-sub/intl_stable.m3u` |
+| 全量版 | 22 个，稳定版 + 3 个动画（主流品牌但小 CDN，需实测） | `https://py8008my.github.io/iptv-sub/intl.m3u` |
 
-备用（jsDelivr 加速，国内有时比 GitHub Pages 快）：
+jsDelivr 加速备用：
 
 ```
 https://cdn.jsdelivr.net/gh/py8008my/iptv-sub@main/intl_stable.m3u
 https://cdn.jsdelivr.net/gh/py8008my/iptv-sub@main/intl.m3u
 ```
 
-> 中文同名文件 `国外官方台.m3u` / `国外官方台_稳定版.m3u` 内容相同，GitHub Pages 对中文路径需用 URL 编码，建议直接用上面的英文文件名。
+## 二、这版改了什么（v2 vs v1）
 
-## 三、这些源是怎么挑出来的
+上一版混进了中东/小地区/宗教野鸡源（Asharq Discovery、God Stands 儿童、Akili 肯尼亚、ERT 希腊、TV Artequatre 比利时、Cowboy Movie、ABN 圣经电影等），已**全部剔除**。本版只留全球主流品牌：
 
-1. 数据源用 **iptv-org 权威总库**（13519 个频道），只挑你要求的四类：新闻 / 纪录片 / 电影 / 动画。
-2. 全部用 `ffprobe` **真实解码验证**（不是只测握手）：必须拿到 `width>0` 的视频轨才算可播，并排除 DASH/HEVC（iOS 的 APTV 原生不支持 DASH，会黑屏）。
-3. 部署前**重新实时跑了一遍 34 个候选**，29 个通过；5 个失效的（BBC News 403、Bloomberg 死链、ARTE 地域封锁、30A TV 断流、Action Hollywood 无视频轨）已自动剔除。
+- **新闻 9 个**：France 24、Al Jazeera、NHK World、CGTN、CNBC、Sky News、CNA、Euronews、ABC News
+- **纪录片 6 个**：BBC Earth、Love Nature、Curiosity×3、CGTN Documentary
+- **电影 4 个**：AMC、MovieSphere(Lionsgate)、Hallmark、Gravitas
+- **动画 3 个**：Nickelodeon、Disney XD、Nick Jr（主流品牌，但小 CDN 托管）
 
-## 四、稳定版 15 个频道清单（按分类，已验证可播放）
+所有源均用 `ffprobe` 真实解码验证（拿到 `width>0` 视频轨），并排除 DASH/HEVC。
 
-| 分类 | 频道 | 分辨率 | 托管 CDN |
-|---|---|---|---|
-| 国际新闻 | Al Jazeera English 半岛电视台 | 1920×1080 | getaj |
-| 国际新闻 | France 24 English 法国24 | 1920×1080 | france24 |
-| 国际新闻 | NHK World-Japan 日本NHK世界 | 1280×720 | nhkworld |
-| 国际新闻 | CGTN 中国国际电视台 | 640×360 | amagi |
-| 国际新闻 | CNBC 财经 | 640×360 | amagi |
-| 国际新闻 | Sky News Extra 天空新闻 | 1024×576 | akamaized |
-| 国际新闻 | ABC News 澳洲广播公司 | 1280×720 | akamaized |
-| 国际新闻 | CNA 亚洲新闻台 | 640×360 | amagi |
-| 国际纪录片 | BBC Earth BBC地球 | 1920×1080 | amagi |
-| 国际纪录片 | Love Nature 热爱自然 | 426×240 | cloudfront |
-| 国际纪录片 | Curiosity Animales/Explora/Motores | 640×360 | cloudfront |
-| 国际电影 | 24 Hour Free Movies 全天免费电影 | 1280×720 | cloudfront |
-| 国际电影 | AMC 美国经典电影 | 1920×1080 | wns.live |
+## 三、为什么动画类只有 3 个、且不是 Cartoon Network / Disney Channel
 
-> 注：动画类在 iptv-org 里的真正官方源（Cartoon Network / Disney Channel）全是 `IP:端口` 个人中继，在你网络上必死，已排除；全量版里保留的 8 个动画台来自中小 CDN，**能不能通需要你实测**——优先试稳定版。
+这是**免费公开源的硬限制**，不是我偷懒：
+
+- iptv-org 总库里 Cartoon Network / Disney Channel / Nickelodeon 的真·官方源，**全是 `IP:端口` 个人中继**（如 `45.171.x:8888`、`206.212.x`），在你北京长城宽带 + 无 IPv6 的网络上必然卡死/不通，已排除。
+- 聚合站 jmp2.uk 的 Nickelodeon/Disney 实测返回 400（需鉴权），也死了。
+- 剩下能播的动画源只有 Nickelodeon(anixa)、Disney XD(aynascope)、Nick Jr(cinerama) 这几个**主流品牌 + 中小 CDN**——品牌是官方的，但 CDN 不够大，在长城宽带下能否通**需要你实测**。
+- Discovery / National Geographic / History 同样没有大 CDN 免费版，故纪录片类未放。
+
+> 想要 Cartoon Network / Disney Channel 这种级别的主流动画大厂源，免费公开源基本无解，得走付费 IPTV 或代理。如果你能接受，先把这 3 个动画台测了；如果不行，告诉我，我找别的途径。
+
+## 四、稳定版 19 个频道清单（全大厂 + 大 CDN）
+
+| 分类 | 频道 | 托管 |
+|---|---|---|
+| 国际新闻 | France 24 English | france24 |
+| 国际新闻 | Al Jazeera English | getaj |
+| 国际新闻 | NHK World-Japan | nhkworld |
+| 国际新闻 | CGTN | amagi |
+| 国际新闻 | CNBC | amagi |
+| 国际新闻 | Sky News Extra | akamaized |
+| 国际新闻 | CNA Originals | amagi |
+| 国际新闻 | Euronews | akamaized |
+| 国际新闻 | ABC News | akamaized |
+| 国际纪录片 | BBC Earth | amagi |
+| 国际纪录片 | Love Nature | cloudfront |
+| 国际纪录片 | Curiosity Animales / Explora / Motores | cloudfront |
+| 国际纪录片 | CGTN Documentary | amagi |
+| 国际电影 | AMC | wns.live |
+| 国际电影 | MovieSphere (Lionsgate) | amagi |
+| 国际电影 | Hallmark Movies | cloudfront |
+| 国际电影 | Gravitas Movies | cloudfront |
+
+> 全量版 `intl.m3u` 另含动画：Nickelodeon、Disney XD、Nick Jr（主流品牌小 CDN）。
 
 ## 五、需要你验收
 
-1. 先把**稳定版** `intl_stable.m3u` 加进 APTV；
-2. 试播几个台，反馈：
-   - ✅ 正常出画
-   - ⏳ 超时 / 卡死
-   - 🔇 有声音没画面（说明是 DASH/HEVC，需换源）
+1. 先加**稳定版** `intl_stable.m3u`（19 个全大厂），试播几个；
+2. 反馈：✅出画 / ⏳卡死 / 🔇有声音无画面（DASH/HEVC，需换源）；
 3. 稳定版若大多能看，再试全量版 `intl.m3u` 补动画类；
-4. 若稳定版也普遍不通，说明这些大 CDN 在你网络上也被限，我再换思路（如走代理 / 找国内可直连的境外源）。
+4. 若稳定版也普遍不通，说明这些大 CDN 在你网络也被限，我再换思路（代理 / 国内可直连境外源）。
 
 ## 六、文件清单
 
 | 文件 | 说明 |
 |---|---|
-| `intl_stable.m3u` | **稳定版** 15 个一线大 CDN 官方源（推荐） |
-| `intl.m3u` | 全量版 29 个（含中小 CDN 动画源） |
-| `国外官方台.m3u` / `国外官方台_稳定版.m3u` | 同上两份的中文同名副本 |
-| `cctv.m3u` 等旧文件 | 国内源历史版本，已确认在你的网络不可用，保留备查 |
+| `intl_stable.m3u` | **稳定版** 19 个主流大厂源（推荐） |
+| `intl.m3u` | 全量版 22 个（含动画小 CDN 源） |
+| `国外官方台.m3u` / `国外官方台_稳定版.m3u` | 中文同名副本 |
+| 旧 `cctv.m3u` 等 | 国内源历史版本，已确认在你的网络不可用 |

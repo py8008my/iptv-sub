@@ -1,31 +1,39 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="NHK World-Japan 日本NHK世界" group-title="国际新闻",NHK World-Japan 日本NHK世界 (1280x720)
-https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8
-#EXTINF:-1 tvg-name="CNBC 财经" group-title="国际新闻",CNBC 财经 (640x360)
-https://amg01079-nbcuuk-amg01079c2-samsung-gb-1258.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-name="France 24 English 法国24英语" group-title="国际新闻",France 24 English 法国24英语 (1920x1080)
+#EXTINF:-1 tvg-name="France 24 English 法国24英语" group-title="国际新闻",France 24 English 法国24英语
 https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8
-#EXTINF:-1 tvg-name="Sky News Extra 天空新闻" group-title="国际新闻",Sky News Extra 天空新闻 (1024x576)
-https://skynewsau-live.akamaized.net/hls/live/2002689/skynewsau-extra1/master.m3u8
-#EXTINF:-1 tvg-name="CGTN 中国国际电视台" group-title="国际新闻",CGTN 中国国际电视台 (640x360)
-https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8
-#EXTINF:-1 tvg-name="ABC News 澳大利亚广播公司新闻" group-title="国际新闻",ABC News 澳大利亚广播公司新闻 (1280x720)
-https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8
-#EXTINF:-1 tvg-name="CNA Originals 亚洲新闻台" group-title="国际新闻",CNA Originals 亚洲新闻台 (640x360)
-https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-name="Al Jazeera English 半岛电视台英语" group-title="国际新闻",Al Jazeera English 半岛电视台英语 (1920x1080)
+#EXTINF:-1 tvg-name="Al Jazeera English 半岛电视台英语" group-title="国际新闻",Al Jazeera English 半岛电视台英语
 https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8
-#EXTINF:-1 tvg-name="Curiosity Motores 好奇机械" group-title="国际纪录片",Curiosity Motores 好奇机械 (640x360)
-https://d5ts03kapml2e.cloudfront.net/CuriosityMotores.m3u8
-#EXTINF:-1 tvg-name="Curiosity Animales 好奇动物" group-title="国际纪录片",Curiosity Animales 好奇动物 (640x360)
-https://d2j2obpavpuw3t.cloudfront.net/CuriosityAnimales.m3u8
-#EXTINF:-1 tvg-name="Love Nature 热爱自然" group-title="国际纪录片",Love Nature 热爱自然 (426x240)
-https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
-#EXTINF:-1 tvg-name="Curiosity Explora 好奇探索" group-title="国际纪录片",Curiosity Explora 好奇探索 (640x360)
-https://d2bvy2sb4c0dbv.cloudfront.net/CuriosityEspanol.m3u8
-#EXTINF:-1 tvg-name="BBC Earth BBC地球" group-title="国际纪录片",BBC Earth BBC地球 (1920x1080)
+#EXTINF:-1 tvg-name="NHK World-Japan 日本NHK世界" group-title="国际新闻",NHK World-Japan 日本NHK世界
+https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8
+#EXTINF:-1 tvg-name="CGTN 中国国际电视台" group-title="国际新闻",CGTN 中国国际电视台
+https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8
+#EXTINF:-1 tvg-name="CNBC 财经" group-title="国际新闻",CNBC 财经
+https://amg01079-nbcuuk-amg01079c2-samsung-gb-1258.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-name="Sky News Extra 天空新闻" group-title="国际新闻",Sky News Extra 天空新闻
+https://skynewsau-live.akamaized.net/hls/live/2002689/skynewsau-extra1/master.m3u8
+#EXTINF:-1 tvg-name="CNA Originals 亚洲新闻台" group-title="国际新闻",CNA Originals 亚洲新闻台
+https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-name="Euronews 欧洲新闻" group-title="国际新闻",Euronews 欧洲新闻
+https://cdn-euronews.akamaized.net/live/eds/euronews-pl/26382/index.m3u8
+#EXTINF:-1 tvg-name="ABC News 澳大利亚广播公司新闻" group-title="国际新闻",ABC News 澳大利亚广播公司新闻
+https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8
+#EXTINF:-1 tvg-name="BBC Earth BBC地球" group-title="国际纪录片",BBC Earth BBC地球
 https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
-#EXTINF:-1 tvg-name="24 Hour Free Movies 全天免费电影" group-title="国际电影",24 Hour Free Movies 全天免费电影 (1280x720)
-https://d1b5mlajbmvkjv.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/UDU-DistroTV/145.m3u8?ads.vf=7FhdsxqVxOi
-#EXTINF:-1 tvg-name="AMC 美国经典电影" group-title="国际电影",AMC 美国经典电影 (1920x1080)
+#EXTINF:-1 tvg-name="Love Nature 热爱自然" group-title="国际纪录片",Love Nature 热爱自然
+https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
+#EXTINF:-1 tvg-name="Curiosity Animales 好奇动物" group-title="国际纪录片",Curiosity Animales 好奇动物
+https://d2j2obpavpuw3t.cloudfront.net/CuriosityAnimales.m3u8
+#EXTINF:-1 tvg-name="Curiosity Explora 好奇探索" group-title="国际纪录片",Curiosity Explora 好奇探索
+https://d2bvy2sb4c0dbv.cloudfront.net/CuriosityEspanol.m3u8
+#EXTINF:-1 tvg-name="Curiosity Motores 好奇机械" group-title="国际纪录片",Curiosity Motores 好奇机械
+https://d5ts03kapml2e.cloudfront.net/CuriosityMotores.m3u8
+#EXTINF:-1 tvg-name="CGTN Documentary 央视纪录" group-title="国际纪录片",CGTN Documentary 央视纪录
+https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
+#EXTINF:-1 tvg-name="AMC 美国经典电影" group-title="国际电影",AMC 美国经典电影
 https://amchls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-name="MovieSphere Lionsgate电影" group-title="国际电影",MovieSphere Lionsgate电影
+https://amg00353-lionsgatestudio-moviesphere-xumo-zh5u0.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-name="Hallmark Movies 霍尔标记电影" group-title="国际电影",Hallmark Movies 霍尔标记电影
+https://dbrb49pjoymg4.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_xumo-ams-aws/master.m3u8?ads.xumo_channelId=99991709
+#EXTINF:-1 tvg-name="Gravitas Movies 引力电影" group-title="国际电影",Gravitas Movies 引力电影
+https://d6dg3ebeih71x.cloudfront.net/Gravitas_Movies.m3u8
